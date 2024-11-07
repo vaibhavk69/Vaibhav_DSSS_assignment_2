@@ -8,8 +8,6 @@ setup(
     author="Vaibhav Kaushik",
     license="Apache",
     packages=find_packages(),
-    install_requires=[
-        "Python>=3.6",
-        "pip>=18.0"
-    ]
+    python_requires=">=3.6",
+    
 )
