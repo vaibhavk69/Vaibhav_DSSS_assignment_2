@@ -20,7 +20,7 @@ def caculate(num1, num2, operation): # changing the method name according to act
         else: ans = num1 * num2
         return problem, ans   
     except Exception as e:
-        print(f"error :: {e}")
+        print(f"error occured is :: {e}")
 
 def math_quiz():
     score = 0     # changing the variable name and make it more understandable
@@ -42,8 +42,10 @@ def math_quiz():
                 score+=1   
             else:
                 print(f"Wrong answer. The correct answer is {ANSWER}.")
-    except Exception as e:       # this exception catches all the i/o error as well as other errors like array-out-of-bound-exception, etc.
-        print(f"error :: {e}")
+    except IndexError as ie:
+        print (f"index error occured")
+    except Exception as e:       # this exception catches all the i/o error as well as other errors 
+        print(f"error occured is :: {e}")
 
     print(f"\nGame over! Your score is: {score}/{total_ques}")
 
